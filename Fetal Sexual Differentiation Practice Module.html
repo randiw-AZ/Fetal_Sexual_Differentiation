@@ -1,0 +1,1918 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fetal Sexual Differentiation Practice</title>
+
+  <style>
+    :root {
+      --ua-red: #AB0520;
+      --ua-red-dark: #8B0015;
+      --ua-blue: #0C234B;
+      --ua-blue-light: #1E5288;
+      --sky: #E6F3FA;
+      --warm-gray: #F4F1EE;
+      --white: #FFFFFF;
+      --text: #1F2933;
+      --muted: #52606D;
+      --success: #146B3A;
+      --success-bg: #E8F6ED;
+      --error: #9B1C1C;
+      --error-bg: #FDECEC;
+      --warning-bg: #FFF6D9;
+      --focus: #FFB81C;
+      --border: #CBD5E1;
+      --shadow: 0 4px 14px rgba(12, 35, 75, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #F7F9FC;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    [tabindex]:focus-visible {
+      outline: 4px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    button:disabled,
+    select:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+
+    .site-header {
+      padding: 2.25rem 1rem;
+      color: var(--white);
+      background:
+        linear-gradient(125deg, rgba(12, 35, 75, 0.97), rgba(30, 82, 136, 0.92)),
+        var(--ua-blue);
+      border-bottom: 8px solid var(--ua-red);
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 0.35rem;
+      color: #CFE8FF;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+    }
+
+    .subtitle {
+      max-width: 820px;
+      margin: 0.85rem 0 0;
+      font-size: 1.08rem;
+    }
+
+    main {
+      padding: 1.5rem 0 3rem;
+    }
+
+    .card {
+      margin: 1rem 0;
+      padding: clamp(1rem, 3vw, 1.6rem);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    h2,
+    h3 {
+      color: var(--ua-blue);
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin-top: 0;
+      padding-bottom: 0.45rem;
+      border-bottom: 3px solid var(--ua-red);
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .learning-grid,
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .mini-card {
+      padding: 1rem;
+      background: var(--warm-gray);
+      border-left: 5px solid var(--ua-red);
+      border-radius: 8px;
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--ua-blue);
+    }
+
+    .accuracy-note {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--warning-bg);
+      border-left: 6px solid #B77800;
+      border-radius: 8px;
+    }
+
+    .accuracy-note h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .accuracy-note ul {
+      margin-bottom: 0;
+    }
+
+    .pathway {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 0.6rem;
+      align-items: stretch;
+      margin: 1rem 0;
+    }
+
+    .path-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100px;
+      padding: 0.85rem;
+      text-align: center;
+      background: var(--sky);
+      border: 2px solid var(--ua-blue-light);
+      border-radius: 10px;
+    }
+
+    .path-box strong {
+      color: var(--ua-blue);
+    }
+
+    .path-arrow {
+      display: flex;
+      align-items: center;
+      color: var(--ua-red);
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--ua-blue);
+    }
+
+    .tab-button {
+      padding: 0.8rem 1.25rem;
+      color: var(--ua-blue);
+      background: var(--white);
+      border: 2px solid var(--ua-blue);
+      border-bottom: 0;
+      border-radius: 9px 9px 0 0;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .tab-button[aria-selected="true"] {
+      color: var(--white);
+      background: var(--ua-blue);
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    .activity-instructions {
+      color: var(--muted);
+    }
+
+    .matching-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .match-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.2fr);
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem;
+      background: #F8FAFC;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .match-row.correct-row {
+      background: var(--success-bg);
+      border-color: var(--success);
+    }
+
+    .match-row.incorrect-row {
+      background: var(--error-bg);
+      border-color: var(--error);
+    }
+
+    .match-prompt {
+      color: var(--ua-blue);
+      font-weight: 700;
+    }
+
+    .match-control label {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .match-control select {
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.65rem;
+      color: var(--text);
+      background: var(--white);
+      border: 2px solid var(--ua-blue-light);
+      border-radius: 7px;
+    }
+
+    .match-result {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.93rem;
+    }
+
+    .match-result.correct {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .match-result.incorrect {
+      color: var(--error);
+      font-weight: 700;
+    }
+
+    .match-explanation {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--text);
+      font-weight: 400;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .primary-button,
+    .secondary-button {
+      padding: 0.72rem 1rem;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .primary-button {
+      color: var(--white);
+      background: var(--ua-red);
+    }
+
+    .primary-button:hover:not(:disabled) {
+      background: var(--ua-red-dark);
+    }
+
+    .secondary-button {
+      color: var(--ua-blue);
+      background: var(--white);
+      border-color: var(--ua-blue);
+    }
+
+    .secondary-button:hover:not(:disabled) {
+      background: var(--sky);
+    }
+
+    .feedback {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .feedback.success {
+      color: #0B4D28;
+      background: var(--success-bg);
+      border-left: 6px solid var(--success);
+    }
+
+    .feedback.error {
+      color: #721414;
+      background: var(--error-bg);
+      border-left: 6px solid var(--error);
+    }
+
+    .feedback.info {
+      color: var(--ua-blue);
+      background: var(--sky);
+      border-left: 6px solid var(--ua-blue-light);
+    }
+
+    .quiz-progress {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 12px;
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+      background: #E2E8F0;
+      border-radius: 999px;
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, var(--ua-red), #EF4056);
+      transition: width 0.3s ease;
+    }
+
+    .question-box {
+      padding: 1rem;
+      border: 2px solid var(--ua-blue);
+      border-radius: 12px;
+    }
+
+    .question-box fieldset {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .question-box legend {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: var(--ua-blue);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .option-label {
+      display: block;
+      margin: 0.65rem 0;
+      padding: 0.8rem;
+      background: #F8FAFC;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .option-label:hover {
+      border-color: var(--ua-blue-light);
+    }
+
+    .option-label.selected-option {
+      background: var(--sky);
+      border-color: var(--ua-blue);
+    }
+
+    .option-label.correct-option {
+      background: var(--success-bg);
+      border-color: var(--success);
+    }
+
+    .option-label.incorrect-option {
+      background: var(--error-bg);
+      border-color: var(--error);
+    }
+
+    .option-explanations {
+      margin: 1rem 0 0;
+      padding-left: 1.25rem;
+    }
+
+    .option-explanations li {
+      margin: 0.65rem 0;
+    }
+
+    .correct-text {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .incorrect-text {
+      color: var(--error);
+      font-weight: 700;
+    }
+
+    .score-card {
+      text-align: center;
+    }
+
+    .score-number {
+      margin: 0.25rem;
+      color: var(--ua-red);
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .key-table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid var(--border);
+    }
+
+    th {
+      color: var(--white);
+      background: var(--ua-blue);
+    }
+
+    tbody tr:nth-child(even) {
+      background: #F8FAFC;
+    }
+
+    .term {
+      color: var(--ua-red-dark);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 1.5rem 0;
+      color: var(--white);
+      background: var(--ua-blue);
+      border-top: 6px solid var(--ua-red);
+    }
+
+    .small {
+      font-size: 0.9rem;
+    }
+
+    .noscript {
+      margin: 1rem;
+      padding: 1rem;
+      color: #721414;
+      background: var(--error-bg);
+      border: 3px solid var(--error);
+    }
+
+    @media (max-width: 800px) {
+      .learning-grid,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pathway {
+        grid-template-columns: 1fr;
+      }
+
+      .path-arrow {
+        justify-content: center;
+        transform: rotate(90deg);
+      }
+
+      .match-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .quiz-progress {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .button-row button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <div class="noscript">
+      This activity requires JavaScript. If it does not run in Brightspace,
+      ask your instructor or LMS administrator to enable active HTML content.
+    </div>
+  </noscript>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Endocrinology Interactive Practice</p>
+      <h1>Fetal Sexual Differentiation</h1>
+      <p class="subtitle">
+        Practice the connections among genetic sex, gonadal differentiation,
+        internal reproductive ducts, and external genital development.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" aria-labelledby="objectives-heading">
+      <h2 id="objectives-heading">Learning objectives</h2>
+
+      <div class="learning-grid">
+        <div class="mini-card">
+          <strong>Genetic sex</strong>
+          Explain how fertilization establishes an XX, XY, or other sex-chromosome complement.
+        </div>
+
+        <div class="mini-card">
+          <strong>Gonadal sex</strong>
+          Connect SRY-driven testicular differentiation with subsequent hormone production.
+        </div>
+
+        <div class="mini-card">
+          <strong>Phenotypic development</strong>
+          Predict internal and external anatomy from the presence, absence, or action of
+          testosterone, DHT, and anti-Müllerian hormone.
+        </div>
+      </div>
+
+      <div class="accuracy-note">
+        <h3>Important anatomical clarification</h3>
+        <ul>
+          <li>
+            The <strong>Wolffian ducts do not form the testes</strong>. Testes develop from
+            the indifferent gonads. Testosterone supports differentiation of the Wolffian
+            ducts into the epididymides, vasa deferentia, seminal vesicles, and ejaculatory ducts.
+          </li>
+          <li>
+            The <strong>Müllerian ducts do not form the ovaries</strong>. Ovaries develop
+            from the indifferent gonads. Müllerian ducts form the uterine tubes, uterus,
+            cervix, and upper portion of the vagina.
+          </li>
+          <li>
+            These developmental events overlap in time. The matching activity emphasizes
+            the relationship between each signal or condition and its outcome rather than
+            implying a strict sequence.
+          </li>
+        </ul>
+
+        <p class="small">
+          Testicular testosterone supports Wolffian duct differentiation, Sertoli-cell AMH
+          causes Müllerian duct regression, and DHT supports masculinization of the external
+          genitalia and prostate.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Pathway overview</h2>
+
+      <div class="pathway" aria-label="Simplified male differentiation pathway">
+        <div class="path-box">
+          <strong>XY fertilization</strong>
+          Usually includes SRY on the Y chromosome
+        </div>
+
+        <div class="path-arrow" aria-hidden="true">→</div>
+
+        <div class="path-box">
+          <strong>Testes</strong>
+          Sertoli cells produce AMH; Leydig cells produce testosterone
+        </div>
+
+        <div class="path-arrow" aria-hidden="true">→</div>
+
+        <div class="path-box">
+          <strong>Typical male pathway</strong>
+          Wolffian structures are retained, Müllerian ducts regress, and DHT
+          masculinizes the external genitalia
+        </div>
+      </div>
+
+      <div class="pathway" aria-label="Simplified female differentiation pathway">
+        <div class="path-box">
+          <strong>XX fertilization</strong>
+          SRY is usually absent
+        </div>
+
+        <div class="path-arrow" aria-hidden="true">→</div>
+
+        <div class="path-box">
+          <strong>Ovaries</strong>
+          No fetal testes, so there is no testicular AMH or high local testicular testosterone
+        </div>
+
+        <div class="path-arrow" aria-hidden="true">→</div>
+
+        <div class="path-box">
+          <strong>Typical female pathway</strong>
+          Müllerian structures develop, Wolffian ducts regress, and external genitalia
+          follow the female-typical pathway
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="matching-heading">
+      <h2 id="matching-heading">Activity 1: Match developmental signals with their outcomes</h2>
+
+      <p>
+        These events overlap during fetal development. Instead of placing them in a strict
+        time sequence, match each signal or condition with the developmental outcome it
+        normally produces.
+      </p>
+
+      <div class="tabs" role="tablist" aria-label="Differentiation pathway tabs">
+        <button
+          class="tab-button"
+          id="male-tab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="male-panel">
+          Male pathway
+        </button>
+
+        <button
+          class="tab-button"
+          id="female-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="female-panel"
+          tabindex="-1">
+          Female pathway
+        </button>
+      </div>
+
+      <section
+        class="tab-panel"
+        id="male-panel"
+        role="tabpanel"
+        aria-labelledby="male-tab">
+
+        <h3>Typical XY differentiation</h3>
+
+        <p class="activity-instructions">
+          For each signal or condition, select its usual developmental outcome. Each outcome
+          is used once. Then choose <strong>Check matches</strong>.
+        </p>
+
+        <div
+          class="matching-list"
+          id="male-matching"
+          aria-label="Male pathway matching exercise">
+        </div>
+
+        <div class="button-row">
+          <button class="primary-button" type="button" data-match-check="male">
+            Check matches
+          </button>
+
+          <button class="secondary-button" type="button" data-match-reset="male">
+            Try again
+          </button>
+
+          <button class="secondary-button" type="button" data-match-reveal="male">
+            Reveal answers
+          </button>
+        </div>
+
+        <div
+          class="feedback info"
+          id="male-match-feedback"
+          role="status"
+          aria-live="polite">
+          Complete all five matches and then check your answers.
+        </div>
+      </section>
+
+      <section
+        class="tab-panel"
+        id="female-panel"
+        role="tabpanel"
+        aria-labelledby="female-tab"
+        hidden>
+
+        <h3>Typical XX differentiation</h3>
+
+        <p class="activity-instructions">
+          For each signal or condition, select its usual developmental outcome. Each outcome
+          is used once. Then choose <strong>Check matches</strong>.
+        </p>
+
+        <div
+          class="matching-list"
+          id="female-matching"
+          aria-label="Female pathway matching exercise">
+        </div>
+
+        <div class="button-row">
+          <button class="primary-button" type="button" data-match-check="female">
+            Check matches
+          </button>
+
+          <button class="secondary-button" type="button" data-match-reset="female">
+            Try again
+          </button>
+
+          <button class="secondary-button" type="button" data-match-reveal="female">
+            Reveal answers
+          </button>
+        </div>
+
+        <div
+          class="feedback info"
+          id="female-match-feedback"
+          role="status"
+          aria-live="polite">
+          Complete all five matches and then check your answers.
+        </div>
+      </section>
+    </section>
+
+    <section class="card" aria-labelledby="quiz-heading">
+      <h2 id="quiz-heading">Activity 2: Predict variations in development</h2>
+
+      <p>
+        Answer each question and submit your answer to view the correct answer and
+        explanations. Use the Previous and Next buttons to review questions. Submitted
+        answers are locked after feedback is displayed.
+      </p>
+
+      <p>
+        For questions involving congenital adrenal hyperplasia, assume the common
+        <strong>21-hydroxylase deficiency</strong> unless stated otherwise.
+      </p>
+
+      <div id="quiz-area">
+        <div class="quiz-progress">
+          <span id="question-counter">Question 1 of 8</span>
+          <span id="score-display">Score: 0 | Answered: 0 of 8</span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="0 of 8 questions answered"
+          aria-valuemin="0"
+          aria-valuemax="8"
+          aria-valuenow="0">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="question-box" id="question-container"></div>
+
+        <div class="button-row">
+          <button class="secondary-button" id="previous-question" type="button">
+            Previous question
+          </button>
+
+          <button class="primary-button" id="submit-answer" type="button">
+            Submit answer
+          </button>
+
+          <button class="secondary-button" id="next-question" type="button">
+            Next question
+          </button>
+        </div>
+
+        <div id="quiz-feedback" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="score-card" id="quiz-results" hidden>
+        <h3>Quiz complete</h3>
+        <p class="score-number" id="final-score">0/8</p>
+        <p id="score-message"></p>
+
+        <div class="button-row" style="justify-content: center;">
+          <button class="primary-button" id="review-quiz" type="button">
+            Review answers
+          </button>
+
+          <button class="secondary-button" id="restart-quiz" type="button">
+            Restart quiz
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">High-yield summary</h2>
+
+      <div class="key-table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Signal</th>
+              <th scope="col">Major developmental effect</th>
+              <th scope="col">If absent or unable to act</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="term">SRY and associated testis-determining pathways</td>
+              <td>Promote differentiation of the indifferent gonad into testes.</td>
+              <td>
+                The gonad generally follows an ovarian pathway if ovarian-promoting
+                pathways function.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="term">Testosterone</td>
+              <td>
+                Supports Wolffian duct differentiation into male internal duct structures.
+              </td>
+              <td>Wolffian ducts regress.</td>
+            </tr>
+
+            <tr>
+              <td class="term">DHT</td>
+              <td>Supports development of the penis, scrotum, and prostate.</td>
+              <td>External genitalia are not fully masculinized.</td>
+            </tr>
+
+            <tr>
+              <td class="term">AMH</td>
+              <td>Causes Müllerian duct regression.</td>
+              <td>Müllerian structures can develop.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="summary-grid" style="margin-top: 1rem;">
+        <div class="mini-card">
+          <strong>Internal and external anatomy can differ</strong>
+          Testosterone and DHT have related but distinct roles.
+        </div>
+
+        <div class="mini-card">
+          <strong>Hormone production is not enough</strong>
+          The target tissue must also contain a functional receptor and signaling pathway.
+        </div>
+
+        <div class="mini-card">
+          <strong>Chromosomes are not the entire pathway</strong>
+          Gonadal development, hormone synthesis, hormone conversion, and tissue response
+          all contribute to phenotype.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Fetal Sexual Differentiation Practice</strong>
+
+      <p class="small">
+        Educational terminology distinguishes chromosomal, gonadal, and phenotypic sex.
+        Differences of sex development may involve chromosomes, gonadal development,
+        hormone synthesis, or hormone action.
+      </p>
+
+      <p class="small">
+        This activity is for instruction and is not a diagnostic tool. Individual clinical
+        presentations vary, and patient-centered terminology should be used.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const matchingData = {
+        male: {
+          prompts: [
+            {
+              id: "m1",
+              prompt: "Fertilization by a Y-bearing sperm",
+              outcome: "An XY embryo is formed.",
+              explanation:
+                "The oocyte contributes an X chromosome, and the Y-bearing sperm contributes the Y chromosome."
+            },
+            {
+              id: "m2",
+              prompt: "SRY and associated testis-determining pathways are present",
+              outcome: "The indifferent gonads differentiate into testes.",
+              explanation:
+                "SRY initiates a network of gene expression that promotes testicular differentiation."
+            },
+            {
+              id: "m3",
+              prompt: "Testosterone is present and target tissues can respond to testosterone",
+              outcome:
+                "The Wolffian ducts differentiate into the epididymides, vasa deferentia, seminal vesicles, and ejaculatory ducts.",
+              explanation:
+                "Testosterone supports development and maintenance of the Wolffian duct system. The testes themselves arise from the gonads, not from the Wolffian ducts."
+            },
+            {
+              id: "m4",
+              prompt: "Testosterone is converted to DHT, and DHT can act on its target tissues",
+              outcome:
+                "The penis, scrotum, and prostate develop along the typical male pathway.",
+              explanation:
+                "5-alpha-reductase converts testosterone to DHT, which is important for masculinization of the external genitalia and development of the prostate."
+            },
+            {
+              id: "m5",
+              prompt: "Sertoli cells produce AMH, and AMH can act on its target tissues",
+              outcome: "The Müllerian ducts regress.",
+              explanation:
+                "AMH, also called Müllerian-inhibiting factor, causes regression of the Müllerian ducts."
+            }
+          ]
+        },
+
+        female: {
+          prompts: [
+            {
+              id: "f1",
+              prompt: "Fertilization by an X-bearing sperm",
+              outcome: "An XX embryo is formed.",
+              explanation:
+                "The oocyte and sperm each contribute an X chromosome."
+            },
+            {
+              id: "f2",
+              prompt: "SRY-driven testis differentiation is absent",
+              outcome: "The indifferent gonads follow an ovarian developmental pathway.",
+              explanation:
+                "In a typical XX embryo, ovarian-promoting pathways support differentiation of the gonads into ovaries."
+            },
+            {
+              id: "f3",
+              prompt: "High local testicular testosterone is absent",
+              outcome: "The Wolffian ducts regress.",
+              explanation:
+                "Without sustained local androgen signaling from fetal testes, the Wolffian duct system is not maintained."
+            },
+            {
+              id: "f4",
+              prompt: "Testicular testosterone-derived DHT is absent",
+              outcome:
+                "The external genitalia follow the female-typical developmental pathway.",
+              explanation:
+                "In the absence of high fetal androgen action, the external genitalia develop along the female-typical pathway."
+            },
+            {
+              id: "f5",
+              prompt: "Testicular AMH is absent",
+              outcome:
+                "The Müllerian ducts form the uterine tubes, uterus, cervix, and upper portion of the vagina.",
+              explanation:
+                "Without testicular AMH, the Müllerian ducts persist and differentiate. The ovaries develop separately from the indifferent gonads."
+            }
+          ]
+        }
+      };
+
+      const quizQuestions = [
+        {
+          question:
+            "Which description best fits the usual developmental and adult pattern associated with a 47,XXY chromosome complement?",
+          options: [
+            {
+              text: "Ovaries, a uterus, and a typical female phenotype",
+              correct: false,
+              explanation:
+                "Usually incorrect. Most 47,XXY individuals have SRY and develop testes rather than ovaries."
+            },
+            {
+              text: "Testes and a male phenotype, often with testicular dysfunction, low testosterone, and reduced fertility",
+              correct: true,
+              explanation:
+                "Correct. This is the typical pattern in Klinefelter syndrome. Testicular dysgenesis commonly leads to hypergonadotropic hypogonadism and infertility."
+            },
+            {
+              text: "Normal testes with a uterus caused by absent AMH",
+              correct: false,
+              explanation:
+                "Incorrect. AMH is generally produced during fetal development, so Müllerian structures usually regress."
+            },
+            {
+              text: "A female external phenotype caused specifically by 5-alpha-reductase deficiency",
+              correct: false,
+              explanation:
+                "Incorrect. An extra X chromosome does not itself cause 5-alpha-reductase deficiency."
+            }
+          ]
+        },
+        {
+          question:
+            "Which description best fits a person with a 45,X chromosome complement (Turner syndrome)?",
+          options: [
+            {
+              text: "A typical male phenotype with fully functional testes",
+              correct: false,
+              explanation:
+                "Incorrect. A Y chromosome and SRY are absent in the usual 45,X complement, so testes do not typically develop."
+            },
+            {
+              text: "A female phenotype with ovarian dysgenesis or streak gonads, often accompanied by infertility",
+              correct: true,
+              explanation:
+                "Correct. Turner syndrome is associated with ovarian dysgenesis, estrogen deficiency, and infertility, although mosaic cases can vary."
+            },
+            {
+              text: "A uterus is always absent because AMH is high",
+              correct: false,
+              explanation:
+                "Incorrect. Without testes, fetal AMH is not normally produced at testicular levels, so Müllerian structures, including the uterus, generally develop."
+            },
+            {
+              text: "Virilized external genitalia caused by excess fetal DHT",
+              correct: false,
+              explanation:
+                "Incorrect. Excess DHT is not a defining feature of Turner syndrome."
+            }
+          ]
+        },
+        {
+          question:
+            "An XY fetus has 5-alpha-reductase type 2 deficiency. Which outcome is most likely at birth?",
+          options: [
+            {
+              text: "Testes, male Wolffian structures, no uterus, and undervirilized or female-appearing external genitalia",
+              correct: true,
+              explanation:
+                "Correct. Testosterone can support Wolffian structures and AMH can regress Müllerian ducts, but reduced DHT impairs masculinization of the external genitalia and prostate."
+            },
+            {
+              text: "Ovaries, a uterus, and typical female external genitalia",
+              correct: false,
+              explanation:
+                "Incorrect. An SRY-positive XY fetus generally develops testes. The enzyme deficiency affects conversion of testosterone to DHT, not gonadal determination."
+            },
+            {
+              text: "Testes plus a uterus because DHT causes Müllerian regression",
+              correct: false,
+              explanation:
+                "Incorrect. AMH—not DHT—is the main signal causing Müllerian duct regression."
+            },
+            {
+              text: "No Wolffian structures because DHT is required for the epididymis and vas deferens",
+              correct: false,
+              explanation:
+                "Incorrect. Testosterone, rather than DHT, is the major androgen supporting Wolffian duct differentiation."
+            }
+          ]
+        },
+        {
+          question:
+            "What is the most likely fetal developmental effect of 5-alpha-reductase type 2 deficiency in an XX individual with ovaries and no abnormal androgen exposure?",
+          options: [
+            {
+              text: "Little or no major effect on typical female fetal differentiation",
+              correct: true,
+              explanation:
+                "Correct. Without fetal testes, there is not normally a high testosterone supply requiring conversion to DHT for sexual differentiation."
+            },
+            {
+              text: "Development of testes",
+              correct: false,
+              explanation:
+                "Incorrect. 5-alpha-reductase does not determine whether the indifferent gonad becomes a testis."
+            },
+            {
+              text: "Development of Wolffian internal structures",
+              correct: false,
+              explanation:
+                "Incorrect. Wolffian differentiation requires sustained local androgen signaling, which is not normally present in an XX fetus with ovaries."
+            },
+            {
+              text: "Regression of the uterus",
+              correct: false,
+              explanation:
+                "Incorrect. Müllerian regression is driven mainly by testicular AMH, not by 5-alpha-reductase."
+            }
+          ]
+        },
+        {
+          question:
+            "Which anatomy is most consistent with complete androgen insensitivity syndrome in an XY individual?",
+          options: [
+            {
+              text: "Testes, absent uterus, female external genitalia, and a short blind-ending vagina",
+              correct: true,
+              explanation:
+                "Correct. Testes produce AMH, causing Müllerian regression, but target tissues cannot respond normally to androgens, producing a female external phenotype."
+            },
+            {
+              text: "Ovaries, uterus, and female external genitalia",
+              correct: false,
+              explanation:
+                "Incorrect. The gonads are testes, not ovaries, because testis determination occurred."
+            },
+            {
+              text: "Testes, uterus, and fully masculinized external genitalia",
+              correct: false,
+              explanation:
+                "Incorrect. AMH usually prevents uterine development, while androgen-receptor dysfunction prevents complete masculinization."
+            },
+            {
+              text: "No testes because testosterone cannot bind its receptor",
+              correct: false,
+              explanation:
+                "Incorrect. Androgen-receptor signaling is not required for the initial SRY-driven differentiation of the gonads into testes."
+            }
+          ]
+        },
+        {
+          question:
+            "What is the most likely effect of an androgen-receptor mutation causing complete androgen insensitivity in an XX individual with ovaries?",
+          options: [
+            {
+              text: "Usually little effect on fetal female internal or external differentiation",
+              correct: true,
+              explanation:
+                "Correct. Typical fetal female differentiation does not require androgen-receptor signaling. A heterozygous person may be an unaffected carrier because the condition is X-linked."
+            },
+            {
+              text: "The ovaries become testes",
+              correct: false,
+              explanation:
+                "Incorrect. Loss of androgen action does not create SRY or initiate testis determination."
+            },
+            {
+              text: "The uterus regresses",
+              correct: false,
+              explanation:
+                "Incorrect. Uterine regression requires AMH signaling, not androgen-receptor signaling."
+            },
+            {
+              text: "The Wolffian ducts form a male internal tract",
+              correct: false,
+              explanation:
+                "Incorrect. Wolffian differentiation requires effective androgen action; complete insensitivity would not promote it."
+            }
+          ]
+        },
+        {
+          question:
+            "An XX fetus has classical 21-hydroxylase-deficient congenital adrenal hyperplasia. Which outcome is most likely?",
+          options: [
+            {
+              text: "Ovaries and Müllerian internal structures with variably virilized external genitalia",
+              correct: true,
+              explanation:
+                "Correct. The fetus has ovaries and lacks testicular AMH, so a uterus and uterine tubes develop. Excess adrenal androgens can virilize the external genitalia."
+            },
+            {
+              text: "Testes and complete Müllerian regression",
+              correct: false,
+              explanation:
+                "Incorrect. Adrenal androgen excess does not normally convert ovaries into testes or produce Sertoli-cell AMH."
+            },
+            {
+              text: "A complete male internal tract derived from the Wolffian ducts",
+              correct: false,
+              explanation:
+                "Incorrect. Adrenal androgen exposure can virilize external genitalia, but it does not usually provide the high local testicular testosterone needed for complete Wolffian differentiation."
+            },
+            {
+              text: "No change in external genitalia because only DHT can act on them",
+              correct: false,
+              explanation:
+                "Incorrect. Excess androgen exposure can produce DHT in target tissues and can variably masculinize the external genitalia."
+            }
+          ]
+        },
+        {
+          question:
+            "An XY fetus has classical 21-hydroxylase-deficient congenital adrenal hyperplasia. Which statement is most accurate?",
+          options: [
+            {
+              text: "External genitalia are often male-appearing, but the newborn may have dangerous cortisol and aldosterone deficiency with salt wasting",
+              correct: true,
+              explanation:
+                "Correct. Testicular androgens already support male differentiation. The urgent clinical problem in severe 21-hydroxylase deficiency may be adrenal insufficiency and salt wasting."
+            },
+            {
+              text: "The fetus necessarily develops ovaries",
+              correct: false,
+              explanation:
+                "Incorrect. 21-hydroxylase deficiency does not remove SRY or prevent testis determination."
+            },
+            {
+              text: "The fetus necessarily develops a uterus",
+              correct: false,
+              explanation:
+                "Incorrect. Sertoli-cell AMH generally causes Müllerian regression."
+            },
+            {
+              text: "All forms of CAH have the same effect on XY external genital development",
+              correct: false,
+              explanation:
+                "Incorrect. CAH is a group of enzyme defects. Some reduce testicular androgen synthesis and may cause undervirilization, whereas classic 21-hydroxylase deficiency causes androgen excess."
+            }
+          ]
+        }
+      ];
+
+      let quizIndex = 0;
+      let shuffledQuizQuestions = [];
+      let quizState = [];
+
+      function shuffle(items) {
+        const copy = items.slice();
+
+        for (let i = copy.length - 1; i > 0; i -= 1) {
+          const j = Math.floor(Math.random() * (i + 1));
+          const temporaryItem = copy[i];
+          copy[i] = copy[j];
+          copy[j] = temporaryItem;
+        }
+
+        return copy;
+      }
+
+      /* Activity 1: Matching */
+
+      function renderMatchingActivity(type) {
+        const container = document.getElementById(type + "-matching");
+        const items = matchingData[type].prompts;
+
+        const outcomes = items.map(function (item) {
+          return {
+            id: item.id,
+            text: item.outcome
+          };
+        });
+
+        container.innerHTML = "";
+
+        items.forEach(function (item, index) {
+          const row = document.createElement("div");
+          row.className = "match-row";
+          row.dataset.correct = item.id;
+
+          const prompt = document.createElement("div");
+          prompt.className = "match-prompt";
+          prompt.innerHTML =
+            '<span aria-hidden="true">' +
+            (index + 1) +
+            ".</span> " +
+            item.prompt;
+
+          const control = document.createElement("div");
+          control.className = "match-control";
+
+          const label = document.createElement("label");
+          const selectId = type + "-match-" + index;
+          label.setAttribute("for", selectId);
+          label.textContent = "Select the developmental outcome:";
+
+          const select = document.createElement("select");
+          select.id = selectId;
+          select.dataset.matchSelect = type;
+
+          const placeholder = document.createElement("option");
+          placeholder.value = "";
+          placeholder.textContent = "Choose an outcome";
+          select.appendChild(placeholder);
+
+          shuffle(outcomes).forEach(function (outcome) {
+            const option = document.createElement("option");
+            option.value = outcome.id;
+            option.textContent = outcome.text;
+            select.appendChild(option);
+          });
+
+          const result = document.createElement("span");
+          result.className = "match-result";
+          result.setAttribute("aria-live", "polite");
+
+          control.appendChild(label);
+          control.appendChild(select);
+          control.appendChild(result);
+          row.appendChild(prompt);
+          row.appendChild(control);
+          container.appendChild(row);
+        });
+
+        const feedback = document.getElementById(type + "-match-feedback");
+        feedback.className = "feedback info";
+        feedback.textContent =
+          "Complete all five matches and then check your answers.";
+      }
+
+      function clearMatchResult(row) {
+        row.classList.remove("correct-row", "incorrect-row");
+
+        const result = row.querySelector(".match-result");
+        result.className = "match-result";
+        result.innerHTML = "";
+      }
+
+      function checkMatches(type) {
+        const container = document.getElementById(type + "-matching");
+        const rows = Array.from(container.querySelectorAll(".match-row"));
+        const feedback = document.getElementById(type + "-match-feedback");
+
+        const incomplete = rows.some(function (row) {
+          return row.querySelector("select").value === "";
+        });
+
+        if (incomplete) {
+          feedback.className = "feedback error";
+          feedback.innerHTML =
+            "<strong>Please complete every match.</strong> Select an outcome for all five signals or conditions.";
+          return;
+        }
+
+        let correctCount = 0;
+
+        rows.forEach(function (row, index) {
+          const select = row.querySelector("select");
+          const result = row.querySelector(".match-result");
+          const item = matchingData[type].prompts[index];
+          const isCorrect = select.value === row.dataset.correct;
+
+          row.classList.remove("correct-row", "incorrect-row");
+
+          if (isCorrect) {
+            correctCount += 1;
+            row.classList.add("correct-row");
+            result.className = "match-result correct";
+            result.innerHTML =
+              "Correct." +
+              '<span class="match-explanation">' +
+              item.explanation +
+              "</span>";
+          } else {
+            row.classList.add("incorrect-row");
+            result.className = "match-result incorrect";
+            result.innerHTML =
+              "Not yet. Reconsider how this signal or condition affects the gonads, ducts, or external genitalia." +
+              '<span class="match-explanation">' +
+              "The correct outcome is: " +
+              item.outcome +
+              "</span>";
+          }
+        });
+
+        if (correctCount === rows.length) {
+          feedback.className = "feedback success";
+          feedback.innerHTML =
+            "<strong>All matches are correct!</strong> These relationships are part of the normal " +
+            (type === "male" ? "XY" : "XX") +
+            " developmental pathway, although the events may overlap in time.";
+        } else {
+          feedback.className = "feedback error";
+          feedback.innerHTML =
+            "<strong>You matched " +
+            correctCount +
+            " of " +
+            rows.length +
+            " correctly.</strong> Review the highlighted rows and try changing the incorrect matches.";
+        }
+      }
+
+      function resetMatches(type) {
+        renderMatchingActivity(type);
+
+        const feedback = document.getElementById(type + "-match-feedback");
+        feedback.className = "feedback info";
+        feedback.textContent =
+          "The outcome choices have been reshuffled. Complete all five matches and check your answers.";
+      }
+
+      function revealMatches(type) {
+        const container = document.getElementById(type + "-matching");
+        const rows = Array.from(container.querySelectorAll(".match-row"));
+
+        rows.forEach(function (row, index) {
+          const item = matchingData[type].prompts[index];
+          const select = row.querySelector("select");
+          const result = row.querySelector(".match-result");
+
+          select.value = item.id;
+          row.classList.remove("incorrect-row");
+          row.classList.add("correct-row");
+          result.className = "match-result correct";
+          result.innerHTML =
+            "Correct match revealed." +
+            '<span class="match-explanation">' +
+            item.explanation +
+            "</span>";
+        });
+
+        const feedback = document.getElementById(type + "-match-feedback");
+        feedback.className = "feedback info";
+        feedback.innerHTML =
+          "<strong>Answers revealed.</strong> Focus on the causal relationship in each row rather than memorizing a strict timeline.";
+      }
+
+      function selectTab(tab) {
+        const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+
+        tabs.forEach(function (currentTab) {
+          const selected = currentTab === tab;
+          currentTab.setAttribute("aria-selected", String(selected));
+          currentTab.tabIndex = selected ? 0 : -1;
+
+          const panel = document.getElementById(
+            currentTab.getAttribute("aria-controls")
+          );
+
+          panel.hidden = !selected;
+        });
+      }
+
+      document.querySelector(".tabs").addEventListener("click", function (event) {
+        const tab = event.target.closest('[role="tab"]');
+
+        if (tab) {
+          selectTab(tab);
+        }
+      });
+
+      document.querySelector(".tabs").addEventListener("keydown", function (event) {
+        const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+        const currentIndex = tabs.indexOf(document.activeElement);
+
+        if (currentIndex < 0) {
+          return;
+        }
+
+        let newIndex = currentIndex;
+
+        if (event.key === "ArrowRight") {
+          newIndex = (currentIndex + 1) % tabs.length;
+        } else if (event.key === "ArrowLeft") {
+          newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        } else if (event.key === "Home") {
+          newIndex = 0;
+        } else if (event.key === "End") {
+          newIndex = tabs.length - 1;
+        }
+
+        if (newIndex !== currentIndex) {
+          event.preventDefault();
+          selectTab(tabs[newIndex]);
+          tabs[newIndex].focus();
+        }
+      });
+
+      document.addEventListener("change", function (event) {
+        if (event.target.matches("[data-match-select]")) {
+          clearMatchResult(event.target.closest(".match-row"));
+        }
+
+        if (event.target.matches('input[name="quiz-option"]')) {
+          const labels = document.querySelectorAll(".option-label");
+
+          labels.forEach(function (label) {
+            label.classList.remove("selected-option");
+          });
+
+          event.target.closest(".option-label").classList.add("selected-option");
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        const checkButton = event.target.closest("[data-match-check]");
+        const resetButton = event.target.closest("[data-match-reset]");
+        const revealButton = event.target.closest("[data-match-reveal]");
+
+        if (checkButton) {
+          checkMatches(checkButton.dataset.matchCheck);
+        }
+
+        if (resetButton) {
+          resetMatches(resetButton.dataset.matchReset);
+        }
+
+        if (revealButton) {
+          revealMatches(revealButton.dataset.matchReveal);
+        }
+      });
+
+      /* Activity 2: Quiz */
+
+      function initializeQuiz() {
+        quizIndex = 0;
+
+        shuffledQuizQuestions = quizQuestions.map(function (question) {
+          return {
+            question: question.question,
+            options: shuffle(question.options)
+          };
+        });
+
+        quizState = shuffledQuizQuestions.map(function () {
+          return {
+            selected: null,
+            submitted: false,
+            correct: false
+          };
+        });
+
+        document.getElementById("quiz-results").hidden = true;
+        document.getElementById("quiz-area").hidden = false;
+        renderQuestion();
+      }
+
+      function getAnsweredCount() {
+        return quizState.filter(function (state) {
+          return state.submitted;
+        }).length;
+      }
+
+      function getCurrentScore() {
+        return quizState.filter(function (state) {
+          return state.submitted && state.correct;
+        }).length;
+      }
+
+      function allQuestionsAnswered() {
+        return getAnsweredCount() === shuffledQuizQuestions.length;
+      }
+
+      function updateQuizProgress() {
+        const answeredCount = getAnsweredCount();
+        const total = shuffledQuizQuestions.length;
+        const progress = (answeredCount / total) * 100;
+        const progressTrack = document.querySelector(".progress-track");
+
+        document.getElementById("score-display").textContent =
+          "Score: " +
+          getCurrentScore() +
+          " | Answered: " +
+          answeredCount +
+          " of " +
+          total;
+
+        document.getElementById("progress-bar").style.width = progress + "%";
+        progressTrack.setAttribute("aria-valuenow", String(answeredCount));
+        progressTrack.setAttribute("aria-valuemax", String(total));
+        progressTrack.setAttribute(
+          "aria-label",
+          answeredCount + " of " + total + " questions answered"
+        );
+      }
+
+      function renderQuestion() {
+        const question = shuffledQuizQuestions[quizIndex];
+        const state = quizState[quizIndex];
+        const container = document.getElementById("question-container");
+        const feedback = document.getElementById("quiz-feedback");
+        const submitButton = document.getElementById("submit-answer");
+        const previousButton = document.getElementById("previous-question");
+        const nextButton = document.getElementById("next-question");
+
+        document.getElementById("question-counter").textContent =
+          "Question " +
+          (quizIndex + 1) +
+          " of " +
+          shuffledQuizQuestions.length;
+
+        updateQuizProgress();
+
+        const optionHTML = question.options.map(function (option, index) {
+          const checked = state.selected === index ? " checked" : "";
+          const disabled = state.submitted ? " disabled" : "";
+
+          let optionClass = "option-label";
+
+          if (!state.submitted && state.selected === index) {
+            optionClass += " selected-option";
+          }
+
+          if (state.submitted && option.correct) {
+            optionClass += " correct-option";
+          }
+
+          if (
+            state.submitted &&
+            state.selected === index &&
+            !option.correct
+          ) {
+            optionClass += " incorrect-option";
+          }
+
+          return (
+            '<label class="' + optionClass + '">' +
+              '<input type="radio" name="quiz-option" value="' +
+                index +
+                '"' +
+                checked +
+                disabled +
+              "> " +
+              "<span>" +
+                option.text +
+              "</span>" +
+            "</label>"
+          );
+        }).join("");
+
+        container.innerHTML =
+          "<fieldset>" +
+            "<legend>" +
+              question.question +
+            "</legend>" +
+            optionHTML +
+          "</fieldset>";
+
+        Array.from(
+          container.querySelectorAll('input[name="quiz-option"]')
+        ).forEach(function (radio) {
+          radio.addEventListener("change", function () {
+            quizState[quizIndex].selected = Number(radio.value);
+            feedback.className = "";
+            feedback.innerHTML = "";
+          });
+        });
+
+        previousButton.disabled = quizIndex === 0;
+
+        if (quizIndex === shuffledQuizQuestions.length - 1) {
+          nextButton.textContent = allQuestionsAnswered()
+            ? "View results"
+            : "Next question";
+          nextButton.disabled = !allQuestionsAnswered();
+        } else {
+          nextButton.textContent = "Next question";
+          nextButton.disabled = false;
+        }
+
+        if (state.submitted) {
+          submitButton.hidden = true;
+          showStoredFeedback();
+        } else {
+          submitButton.hidden = false;
+          submitButton.disabled = false;
+          feedback.className = "";
+          feedback.innerHTML = "";
+        }
+      }
+
+      function showStoredFeedback() {
+        const question = shuffledQuizQuestions[quizIndex];
+        const state = quizState[quizIndex];
+        const feedback = document.getElementById("quiz-feedback");
+        const selectedOption = question.options[state.selected];
+
+        if (selectedOption.correct) {
+          feedback.className = "feedback success";
+          feedback.innerHTML = "<strong>Correct.</strong>";
+        } else {
+          feedback.className = "feedback error";
+          feedback.innerHTML =
+            "<strong>Incorrect.</strong> Review the explanation for each option below.";
+        }
+
+        const explanations = document.createElement("ul");
+        explanations.className = "option-explanations";
+
+        question.options.forEach(function (option) {
+          const item = document.createElement("li");
+          const statusClass = option.correct
+            ? "correct-text"
+            : "incorrect-text";
+          const statusText = option.correct
+            ? "Correct option: "
+            : "Why this is not the best answer: ";
+
+          item.innerHTML =
+            '<span class="' +
+              statusClass +
+            '">' +
+              statusText +
+            "</span>" +
+            "<strong>" +
+              option.text +
+            "</strong><br>" +
+            option.explanation;
+
+          explanations.appendChild(item);
+        });
+
+        feedback.appendChild(explanations);
+      }
+
+      function submitAnswer() {
+        const state = quizState[quizIndex];
+
+        if (state.submitted) {
+          return;
+        }
+
+        const selected = document.querySelector(
+          'input[name="quiz-option"]:checked'
+        );
+
+        const feedback = document.getElementById("quiz-feedback");
+
+        if (!selected) {
+          feedback.className = "feedback error";
+          feedback.textContent = "Choose an answer before submitting.";
+          return;
+        }
+
+        state.selected = Number(selected.value);
+        state.submitted = true;
+        state.correct =
+          shuffledQuizQuestions[quizIndex].options[state.selected].correct;
+
+        renderQuestion();
+
+        const updatedFeedback = document.getElementById("quiz-feedback");
+        updatedFeedback.setAttribute("tabindex", "-1");
+        updatedFeedback.focus();
+      }
+
+      function saveTentativeSelection() {
+        if (quizState[quizIndex].submitted) {
+          return;
+        }
+
+        const selected = document.querySelector(
+          'input[name="quiz-option"]:checked'
+        );
+
+        if (selected) {
+          quizState[quizIndex].selected = Number(selected.value);
+        }
+      }
+
+      function focusQuestion() {
+        const container = document.getElementById("question-container");
+        container.setAttribute("tabindex", "-1");
+        container.focus();
+      }
+
+      function previousQuestion() {
+        if (quizIndex === 0) {
+          return;
+        }
+
+        saveTentativeSelection();
+        quizIndex -= 1;
+        renderQuestion();
+        focusQuestion();
+      }
+
+      function nextQuestion() {
+        saveTentativeSelection();
+
+        if (quizIndex < shuffledQuizQuestions.length - 1) {
+          quizIndex += 1;
+          renderQuestion();
+          focusQuestion();
+        } else if (allQuestionsAnswered()) {
+          showResults();
+        }
+      }
+
+      function showResults() {
+        const score = getCurrentScore();
+        const total = shuffledQuizQuestions.length;
+        const results = document.getElementById("quiz-results");
+
+        document.getElementById("quiz-area").hidden = true;
+        results.hidden = false;
+        results.setAttribute("tabindex", "-1");
+
+        document.getElementById("final-score").textContent =
+          score + "/" + total;
+
+        const percent = Math.round((score / total) * 100);
+        let message;
+
+        if (percent >= 88) {
+          message =
+            "Excellent work. You are distinguishing chromosomal, gonadal, internal duct, and external genital development.";
+        } else if (percent >= 63) {
+          message =
+            "Good progress. Review the distinct roles of testosterone, DHT, AMH, and androgen receptors.";
+        } else {
+          message =
+            "Review the pathway summary, especially which structures arise from the gonads, Wolffian ducts, and Müllerian ducts.";
+        }
+
+        document.getElementById("score-message").textContent =
+          "You earned " +
+          percent +
+          "%. " +
+          message +
+          " You may review your submitted answers or restart with newly shuffled options.";
+
+        results.focus();
+      }
+
+      function reviewQuiz() {
+        quizIndex = 0;
+        document.getElementById("quiz-results").hidden = true;
+        document.getElementById("quiz-area").hidden = false;
+        renderQuestion();
+        focusQuestion();
+      }
+
+      document
+        .getElementById("submit-answer")
+        .addEventListener("click", submitAnswer);
+
+      document
+        .getElementById("previous-question")
+        .addEventListener("click", previousQuestion);
+
+      document
+        .getElementById("next-question")
+        .addEventListener("click", nextQuestion);
+
+      document
+        .getElementById("review-quiz")
+        .addEventListener("click", reviewQuiz);
+
+      document
+        .getElementById("restart-quiz")
+        .addEventListener("click", initializeQuiz);
+
+      renderMatchingActivity("male");
+      renderMatchingActivity("female");
+      initializeQuiz();
+    }());
+  </script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
